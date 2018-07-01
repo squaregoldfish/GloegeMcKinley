@@ -1,0 +1,14 @@
+ ! NOAA/PMEL TMAP
+ ! PyFERRET v7 (opt)
+ ! Linux 3.19.0-64-generic - 07/01/16
+ !  1-Jul-18 19:49     
+
+use pCO2_2D_mon_CESM002_1x1_198201-201701.nc
+sho dat
+define axis/x=1.25:358.75:2.5 lon25
+define axis/y=-88.75:88.75:2.5 lat25
+define grid/x=lon25/y=lat25 grid25
+save/file=temp.nc pco2[g=grid25]
+set mem/size=2048
+save/file=temp.nc pco2[g=grid25]
+quit
