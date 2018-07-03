@@ -76,7 +76,7 @@ proc getDayIndex {jdate days} {
 
 
 proc getLatCell {lat} {
-    set boundary [expr floor($lat / 2.5)]
+    set boundary [expr floor($lat / 1)]
     set cell [expr $boundary + 36]
     if {$lat > 0} {
         set cell [expr $cell + 1]
@@ -85,9 +85,9 @@ proc getLatCell {lat} {
 }
 
 proc getLonCell {lon} {
-    set result [expr (floor($lon / 2.5) + 1)]
-    if {$result == 145} {
-        set result 144
+    set result [expr (floor($lon / 1) + 1)]
+    if {$result == 361} {
+        set result 360
     }
     return [expr int($result)]
 }
