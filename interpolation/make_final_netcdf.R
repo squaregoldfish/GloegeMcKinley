@@ -89,6 +89,5 @@ nc <- nc_create(paste(OUTPUT_ROOT, "/fco2.nc", sep=""), list(pco2_var, uncertain
 ncvar_put(nc, pco2_var, pco2)
 ncvar_put(nc, uncertainty_var, uncertainties)
 #ncatt_put(nc, "time", "calendar", "noleap")
-ncatt_put(nc, 0, "Title", "Bradshaw Tracks project - Full SOCATv5 Interpolation")
 nc_close(nc)
 
