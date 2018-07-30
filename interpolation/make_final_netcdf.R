@@ -82,7 +82,7 @@ lon_dim <- ncdim_def("lon", "degrees_east", lons)
 lat_dim <- ncdim_def("lat", "degrees_north", lats)
 time_dim <- ncdim_def("time", "year", times, unlim=TRUE)
 
-pco2_var <- ncvar_def("fco2", "uatm", list(lon_dim, lat_dim, time_dim), -1e35, prec="double")
+pco2_var <- ncvar_def("pCO2_UEA-SI", "uatm", list(lon_dim, lat_dim, time_dim), -1e35, prec="double")
 uncertainty_var <- ncvar_def("uncertainty", "uatm", list(lon_dim, lat_dim, time_dim), -1e35, prec="double")
 
 nc <- nc_create(paste(OUTPUT_ROOT, "/fco2.nc", sep=""), list(pco2_var, uncertainty_var))
