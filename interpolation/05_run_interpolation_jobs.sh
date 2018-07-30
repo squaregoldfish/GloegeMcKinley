@@ -13,6 +13,8 @@ fi
 
 output_root="/Data/Scratch/science/GloegeMcKinley/${model}"
 
+mkdir "${output_root}/interpolation_outputs/$outdir"
+
 ./make_interpolation_jobs.tcl $output_root $indir $outdir
 make -j $threads
 ./count_success_cells.tcl $output_root $outdir
